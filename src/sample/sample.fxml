@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.ScatterChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="736.0" prefWidth="975.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <tabs>
+    <Tab text="Analiza">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="497.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="84.0" layoutY="92.0" text=" Pojemność [mF]">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="114.0" layoutY="75.0" text="C">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtC" layoutX="85.0" layoutY="107.0" prefHeight="25.0" prefWidth="73.0" />
+                  <TextField fx:id="txtU" layoutX="218.0" layoutY="107.0" prefHeight="25.0" prefWidth="73.0" />
+                  <TextField fx:id="txtENa" layoutX="27.0" layoutY="187.0" prefHeight="25.0" prefWidth="73.0" />
+                  <ScatterChart fx:id="scatterU" layoutX="421.0" layoutY="7.0" prefHeight="360.0" prefWidth="511.0" title="U(t) [mV] ">
+                     <xAxis>
+                        <NumberAxis side="BOTTOM" fx:id="xU" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="yU" side="LEFT" />
+                     </yAxis>
+                  </ScatterChart>
+                  <ScatterChart fx:id="scatterI" layoutX="421.0" layoutY="367.0" prefHeight="360.0" prefWidth="511.0" title="I(t) [mA]">
+                     <xAxis>
+                        <NumberAxis side="BOTTOM" fx:id="xI" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="yI" side="LEFT" />
+                     </yAxis>
+                  </ScatterChart>
+                  <Label layoutX="98.0" layoutY="14.0" prefHeight="47.0" prefWidth="216.0" text="ZMIENNE PARAMETRY">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="206.0" layoutY="92.0" text="Napięcie zadane [mV]">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="43.0" layoutY="153.0" text="ENa">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="166.0" text=" Potencjał odwrócenia ">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="250.0" layoutY="75.0" text="U">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtEK" layoutX="146.0" layoutY="187.0" prefHeight="25.0" prefWidth="73.0" />
+                  <Label layoutX="164.0" layoutY="154.0" text="EK">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="146.0" layoutY="167.0" text=" Potencjał odwrócenia ">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtEL" layoutX="285.0" layoutY="187.0" prefHeight="25.0" prefWidth="73.0" />
+                  <Label layoutX="303.0" layoutY="154.0" text="EL">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="285.0" layoutY="167.0" text=" Potencjał odwrócenia ">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtENa1" layoutX="29.0" layoutY="277.0" prefHeight="25.0" prefWidth="73.0" />
+                  <Label layoutX="45.0" layoutY="243.0" text="gNa">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="256.0" text="Konduktancja">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtEK1" layoutX="148.0" layoutY="277.0" prefHeight="25.0" prefWidth="73.0" />
+                  <Label layoutX="166.0" layoutY="244.0" text="gK">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="148.0" layoutY="257.0" text="Konduktacnja">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtEL1" layoutX="287.0" layoutY="277.0" prefHeight="25.0" prefWidth="73.0" />
+                  <Label layoutX="305.0" layoutY="244.0" text="gL">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="287.0" layoutY="257.0" text="Konduktancja">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn" layoutX="156.0" layoutY="340.0" mnemonicParsing="false" onAction="#btnClicked" prefHeight="54.0" prefWidth="118.0" text="NERWUJ">
+                     <font>
+                        <Font name="System Italic" size="21.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="118.0" layoutY="583.0" text="Średni potencjał iglicy">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtF" layoutX="122.0" layoutY="493.0">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="118.0" layoutY="479.0" text="Częstotliwość generowania iglic">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="126.0" layoutY="583.0">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="112.0" layoutY="636.0" text="Odchylenie standardowe iglicy">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtMax" layoutX="121.0" layoutY="547.0">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtMean" layoutX="118.0" layoutY="600.0">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtStd" layoutX="118.0" layoutY="653.0">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="120.0" layoutY="533.0" text="Maksymalny potencjał iglicy">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </Label>
+                  <Text layoutX="56.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wyznaczone parametry opisujące dynamikę neuronów:">
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                  </Text>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Bramkowania">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ScatterChart fx:id="scatterINa" layoutX="195.0" prefHeight="322.0" prefWidth="463.0" title="INa(t)">
+                    <xAxis>
+                      <NumberAxis side="BOTTOM" fx:id="xIna" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="yINa" side="LEFT" />
+                    </yAxis>
+                  </ScatterChart>
+                  <ScatterChart fx:id="scatterIK" layoutX="25.0" layoutY="306.0" prefHeight="322.0" prefWidth="463.0" title="IK(t)">
+                     <xAxis>
+                        <NumberAxis side="BOTTOM" fx:id="xIK" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="yIK" side="LEFT" />
+                     </yAxis>
+                  </ScatterChart>
+                  <ScatterChart fx:id="scatterIL" layoutX="498.0" layoutY="306.0" prefHeight="322.0" prefWidth="463.0" title="IL(t)">
+                     <xAxis>
+                        <NumberAxis side="BOTTOM" fx:id="xIL" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="yIL" side="LEFT" />
+                     </yAxis>
+                  </ScatterChart>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Prądy jonowe">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ScatterChart fx:id="scatterM" layoutX="498.0" layoutY="24.0" prefHeight="322.0" prefWidth="463.0" title="M(t)">
+                     <xAxis>
+                        <NumberAxis side="BOTTOM" fx:id="xM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="yM" side="LEFT" />
+                     </yAxis>
+                  </ScatterChart>
+                  <ScatterChart fx:id="scatterN" layoutX="14.0" layoutY="354.0" prefHeight="322.0" prefWidth="463.0" title="N(t)">
+                     <xAxis>
+                        <NumberAxis side="BOTTOM" fx:id="xN" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="yN" side="LEFT" />
+                     </yAxis>
+                  </ScatterChart>
+                  <ScatterChart fx:id="scatterH" layoutX="498.0" layoutY="346.0" prefHeight="322.0" prefWidth="463.0" title="H(t)">
+                     <xAxis>
+                        <NumberAxis side="BOTTOM" fx:id="xH" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="yH" side="LEFT" />
+                     </yAxis>
+                  </ScatterChart>
+                  <TextArea layoutX="45.0" layoutY="14.0" prefHeight="146.0" prefWidth="402.0" text="                               Model Huxleya Hodgkina&#10;Model operuje na zmiennych bramkujących (M,N i H) w celu modelowania&#10;prawdopodobieństwa otwarcia kanału w danym momencie. Kombinacja &#10;zmiennych M i H kontroluje kanały sodowe, a N potasowe. &#10;         M opisuje aktywację (otwarcie) kanału&#10;         H opisuje inaktywację (zamknięcie)  kanału">
+                     <font>
+                        <Font name="Sylfaen" size="12.0" />
+                     </font>
+                  </TextArea>
+                  <ImageView fx:id="model" fitHeight="229.0" fitWidth="328.0" layoutX="104.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true" style="-fx-image: url(mHH.png);" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
